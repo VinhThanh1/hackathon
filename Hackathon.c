@@ -44,6 +44,24 @@ int main(){
 				break;
 			}
 			case 4:{
+				if (n < 2) {
+                                printf("Mang khong du phan tu de tim gia tri nho thu hai.\n");
+                                break;
+                                }
+                               int min1 = arr[0], min2 = __INT_MAX__;
+                               for (int i = 1; i < n; i++) {
+                                   if (arr[i] < min1) {
+                                       min2 = min1;
+                                       min1 = arr[i];
+                                    } else if (arr[i] > min1 && arr[i] < min2) {
+                                   min2 = arr[i];
+                                    }
+                                    }
+                                 if (min2 == __INT_MAX__) {
+                                    printf("Khong co gia tri nho thu 2 trong mang.\n");
+                                   } else {
+                                     printf("Gia tri nho thu 2 trong mang la: %d\n", min2);
+                                      }
 				break;
 			}
 			case 5:{
